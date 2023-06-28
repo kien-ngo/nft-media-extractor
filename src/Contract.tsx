@@ -25,8 +25,8 @@ export default function Contract() {
     setErrorMessage("");
     setContractAddress(address);
   };
-
-  const contractLoaded = contract && !isLoading;
+  if (errorLoadingContract) console.log(errorLoadingContract)
+  const contractLoaded = contract && !isLoading && !errorLoadingContract;
 
   return (
     <>
